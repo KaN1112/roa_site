@@ -325,3 +325,25 @@
         gap: 15px;
     }
 }
+.nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* ← これが超重要！ */
+}
+
+.nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+@media (max-width: 768px) {
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+}
