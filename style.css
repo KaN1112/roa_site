@@ -273,4 +273,55 @@
 
 .sns-btn:hover {
     background: #005fcc;
+
+}
+/* スマホ対応（画面幅 768px 以下） */
+@media (max-width: 768px) {
+
+    /* ヘッダーの横並びを縦並びに */
+    .home-header-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .home-header-title {
+        font-size: 2rem;
+    }
+
+    .home-header-img {
+        width: 70px;
+        height: 70px;
+    }
+
+    /* プロフィールの横並びを縦並びに */
+    .profile-main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-photo {
+        width: 80%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .profile-text {
+        width: 100%;
+    }
+
+    /* デイリーカードの画像を少し大きめに */
+    .daily-img {
+        width: 80%;
+    }
+
+    /* ギャラリーのグリッドを2列に */
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* SNSボタンを縦並びに */
+    .sns-links {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
