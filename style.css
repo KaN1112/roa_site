@@ -90,8 +90,9 @@ figcaption { display: flex; justify-content: space-between; gap: 20px; margin-to
 .profile-layout__copy > p { color: var(--muted); }
 .facts { display: grid; grid-template-columns: .7fr 1.3fr; gap: clamp(50px, 10vw, 130px); padding-block: clamp(85px, 12vw, 150px); border-top: 1px solid var(--line); }
 .facts h2 { margin: 0; font-size: clamp(2.4rem, 4vw, 4rem); }
-.facts dl { margin: 0; }
-.facts dl div { display: grid; grid-template-columns: 150px 1fr; padding: 24px 0; border-bottom: 1px solid var(--line); }
+.facts dl { margin: 0; padding: clamp(10px, 2vw, 24px) clamp(24px, 4vw, 48px); border: 1px solid var(--line); border-radius: 24px; background: rgba(255, 255, 255, .58); box-shadow: 0 20px 60px rgba(32, 36, 38, .06); }
+.facts dl div { display: grid; grid-template-columns: 150px 1fr; padding: 26px 0; border-bottom: 1px solid var(--line); }
+.facts dl div:last-child { border-bottom: 0; }
 .facts dt { color: var(--muted); font-size: .8rem; }
 .facts dd { margin: 0; font-weight: 500; }
 .next-page { display: flex; align-items: center; justify-content: flex-end; padding-block: 58px; border-top: 1px solid var(--line); }
