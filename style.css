@@ -205,8 +205,8 @@ figcaption { display: flex; justify-content: space-between; gap: 20px; margin-to
     .page-hero { padding-block: 85px 115px; }
     .page-hero h1 { font-size: clamp(4rem, 20vw, 6rem); }
     .page-hero--profile h1 { font-size: clamp(3rem, 15.5vw, 6rem); }
-    .page-hero--profile > p:last-child { font-size: clamp(.58rem, 3.5vw, .9rem); letter-spacing: -.03em; }
-    .page-hero--journal > p:last-child { font-size: clamp(.58rem, 3.5vw, .9rem); letter-spacing: -.03em; }
+    .page-hero--profile > p:last-child,
+    .page-hero--journal > p:last-child { font-size: min(.9rem, calc((100vw - 44px) / 24)); letter-spacing: -.03em; }
     .profile-layout__copy h2 { font-size: clamp(1.55rem, 6.4vw, 2.4rem); }
     .facts { gap: 44px; padding-block: 78px 96px; }
     .facts h2 { font-size: clamp(2.5rem, 13vw, 3.8rem); }
