@@ -44,6 +44,29 @@
         revealItems.forEach((item) => item.classList.add('is-visible'));
     }
 
+    const fitLineGroups = [...document.querySelectorAll('[data-fit-lines]')];
+    const fitLines = () => {
+        fitLineGroups.forEach((group) => {
+            group.style.removeProperty('font-size');
+            const availableWidth = group.clientWidth;
+            const lines = [...group.querySelectorAll(':scope > span')];
+            const longestLine = Math.max(0, ...lines.map((line) => line.scrollWidth));
+            if (!availableWidth || longestLine <= availableWidth) return;
+
+            const currentSize = Number.parseFloat(getComputedStyle(group).fontSize);
+            const fittedSize = Math.max(7, currentSize * ((availableWidth - 2) / longestLine));
+            group.style.fontSize = `${fittedSize}px`;
+        });
+    };
+
+    fitLines();
+    document.fonts?.ready.then(fitLines);
+    let fitFrame = 0;
+    window.addEventListener('resize', () => {
+        cancelAnimationFrame(fitFrame);
+        fitFrame = requestAnimationFrame(fitLines);
+    });
+
     const galleryItems = [...document.querySelectorAll('[data-gallery-item]')];
     const lightbox = document.querySelector('[data-lightbox]');
     if (!galleryItems.length || !lightbox) {

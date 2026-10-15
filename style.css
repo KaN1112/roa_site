@@ -84,6 +84,7 @@ figcaption { display: flex; justify-content: space-between; gap: 20px; margin-to
 .page-hero > p:last-child { max-width: 310px; margin: 0 0 5px; color: var(--muted); }
 .page-hero--profile { grid-template-columns: minmax(0, 1.3fr) minmax(400px, .7fr); }
 .page-hero--profile h1 { white-space: nowrap; font-size: clamp(4.5rem, 8.4vw, 9rem); }
+.page-hero--profile > p, .page-hero--journal > p { width: 100%; max-width: none; min-width: 0; }
 .page-hero--profile > p span { display: block; width: max-content; white-space: nowrap; }
 .profile-layout { display: grid; grid-template-columns: 1.12fr .88fr; gap: clamp(50px, 11vw, 150px); align-items: center; padding-bottom: clamp(120px, 18vw, 230px); }
 .profile-layout__photo img { aspect-ratio: 3 / 4; object-fit: cover; }
