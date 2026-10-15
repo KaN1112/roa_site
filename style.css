@@ -66,9 +66,9 @@ h2 { font-size: clamp(2rem, 5vw, 4.75rem); }
 .selection-grid__side img { aspect-ratio: 4 / 3; object-fit: cover; }
 figcaption { display: flex; justify-content: space-between; gap: 20px; margin-top: 12px; color: var(--muted); font: 500 .64rem/1.5 "Montserrat", sans-serif; letter-spacing: .1em; text-transform: uppercase; }
 
-.journal-callout { display: grid; grid-template-columns: .2fr 1.8fr; gap: 40px; padding-block: clamp(90px, 13vw, 170px); border-top: 1px solid var(--line); }
-.journal-callout > div { grid-column: 2; }
-.journal-callout h2 { max-width: 900px; margin-bottom: 32px; font-size: clamp(2.2rem, 4vw, 4rem); }
+.journal-callout { display: grid; grid-template-columns: 1fr; padding-block: clamp(90px, 13vw, 170px); border-top: 1px solid var(--line); }
+.journal-callout > div { grid-column: 1; }
+.journal-callout h2 { max-width: 900px; margin-bottom: 32px; padding-bottom: 32px; border-bottom: 1px solid var(--line); font-size: clamp(2.2rem, 4vw, 4rem); }
 .journal-callout div > p { max-width: 620px; margin-bottom: 34px; color: var(--muted); }
 .profile-callout { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(46px, 10vw, 140px); padding-bottom: clamp(120px, 18vw, 230px); }
 .profile-callout__image img { aspect-ratio: 4 / 5; object-fit: cover; }
